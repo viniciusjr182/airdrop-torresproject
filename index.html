@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="js/bootstrap.min.js">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  </head>
+  <style>
+    body {
+      background:#52595D;
+    }
+    div {
+      margin:auto;
+      bottom:-2px;
+    }
+    a {
+      text-decoration:none;
+    }
+    .copy input {
+      background: transparent;
+      position: relative;
+      border: 1px solid #000;
+      border-radius: 3px;
+      height: 35px;
+      padding: 1px;
+      outline: none;
+      color: #000;
+      font-size: 18px;
+    }
+   .copy button {
+      position: relative;
+  background: #CCC9CE;
+  border: 1px solid #000;
+  border-radius: 3px;
+  height: 30px;
+  width: 125px;
+  color: #000;
+  outline: none;
+  font-size: 18px;
+  padding: 1px;
+  bottom: -4px;
+    }
+  </style>
+  <body>
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container">
+        <a class="navbar-brand" href="#">Torres Project</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMain" aria-controls="navbarMain" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>        
+        <div class="collapse navbar-collapse" id="navbarMain">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="https://twitter.com/TorresWeb3/status/1539154162579308550">Airdrop</a>
+            </li>
+        </div>
+        </div>
+    </nav>
+<div class="card" style="width: 22rem;">
+  <img class="card-img-top" src="bg.jpg" alt="Card image cap">
+  <div class="card-body">
+    <h5 class="card-title">Airdrop is Live For Holder TRS</h5>
+    <p class="card-text">Send 1 MATIC to smart contract <br>Get 200 TRS token instant <br>Minimun 0.5 MATIC</p>
+   <div class="copy">
+      <input type="text" value="0x53b19A5957524629cbDcD0eFF619958d46B18597" id="copyText" readonly>
+        <button id="copyBtn">Copy Contract</button>
+   </div>
+         <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+          <script>
+            const copyBtn = document.getElementById('copyBtn')
+            const copyText = document.getElementById('copyText')
+            
+            copyBtn.onclick = () => {
+                copyText.select();    // Selects the text inside the input
+                document.execCommand('copy');    // Simply copies the selected text to clipboard 
+                 Swal.fire({         //displays a pop up with sweetalert
+                    icon: 'success',
+                    title: 'Text copied to clipboard',
+                    showConfirmButton: false,
+                    timer: 1000
+                });
+            }
+        </script>
+  </div>
+  <ul class="list-group list-group-flush">
+   <a href="WHITEPAPERv1.pdf"> <li class="list-group-item">Whitepaper</li></a>
+   <a onclick="klik()"> <li class="list-group-item">Presale</li></a>
+   <script>
+     function klik() {
+       alert ("Coming Soon");
+     }
+   </script>
+   <a href="https://polygonscan.com/token/0x53b19A5957524629cbDcD0eFF619958d46B18597"> <li class="list-group-item">Contract address</li></a>
+  </ul>
+  <div class="card-body">
+    <a href="https://t.me/torresproject"><button style="font-size:21px">Telegram <i class="fa fa-telegram"></i></button></a>
+    <a href="https://twitter.com/TorresWeb3">    <button style="font-size:21px">Twitter <i class="fa fa-twitter"></i></button></a>
+  </div>
+</div>
+  </body>
+</html>
